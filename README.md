@@ -1,2 +1,2 @@
-# Gniminion.github.io
-Personal portfolio website
+# Personal Website
+Welcome! I hope you enjoy your stay :]
