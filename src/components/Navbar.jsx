@@ -15,7 +15,7 @@ function Navbar({ scrollToSection, homeRef, projectsRef, contactRef }) {
         Designer<br/>
         Developer
       </h3>
-      <div className="flex ml-4 mt-4 items-center space-x-4">
+      <div className="flex ml-4 mt-4 items-center space-x-4 text-sm">
         <a href="https://www.linkedin.com/in/mu-mingming-zhang/" target="_blank">
           <button className="px-2 py-1 border-2 text-gray rounded cursor-pointer hover:text-primary transition-all">
             Resume
