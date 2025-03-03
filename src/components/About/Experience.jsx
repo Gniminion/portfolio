@@ -7,7 +7,7 @@ function Experience() {
       logo: "🏢",
       institution: "Mikomiko SG | 2025",
       role: "UX/UI Designer and Product Managment",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      description: "",
     },
     {
       logo: "🏢",
@@ -37,7 +37,7 @@ function Experience() {
 
       <div className="flex rounded-lg p-1">
         <button
-          className={`flex-1 px-2 py-1 rounded-lg transition-all duration-300 ${
+          className={`hover:cursor-pointer border-2 border-dark3 flex-1 px-2 py-1 rounded-l-lg transition-all duration-300 ${
             activeTab === "Experience"
               ? "bg-dark3 text-white font-semibold"
               : "bg-dark text-gray"
@@ -48,7 +48,7 @@ function Experience() {
         </button>
 
         <button
-          className={`flex-1 px-2 py-1 rounded-lg transition-all duration-300 ${
+          className={`hover:cursor-pointer border-2 border-dark3 flex-1 px-2 py-1 rounded-r-lg transition-all duration-300 ${
             activeTab === "Education"
               ? "bg-dark3 text-white font-semibold"
               : "bg-dark text-gray"
@@ -59,7 +59,7 @@ function Experience() {
         </button>
       </div>
 
-      <div className="mt-4 border border-dark3 bg-dark rounded-lg p-6 h-84 overflow-y-auto">
+      <div className="mt-4 border-2 border-dark3 bg-dark rounded-lg p-6 h-84 overflow-y-auto transition-all">
         {activeTab === "Experience"
           ? experiences.map((exp, index) => (
               <div key={index} className="mb-6">

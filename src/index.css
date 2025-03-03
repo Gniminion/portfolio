@@ -13,6 +13,9 @@
   .border-dark3 {
     border-color: #454655; 
   }
+  .border-primary {
+    border-color: #F78C7E;
+  }
   .text-primary {
     color: #F78C7E;
   }

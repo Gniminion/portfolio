@@ -11,9 +11,9 @@ function Navbar({ scrollToSection, homeRef, projectsRef, contactRef }) {
         <span className="text-primary font-bold">Mu Zhang</span> <br/>
       </h1>
       <h3 className="text-left ml-4">
-        Analyst <br/>
-        Designer<br/>
-        Developer
+        Data Analyst <br/>
+        UI Designer<br/>
+        Web Developer
       </h3>
       <div className="flex ml-4 mt-4 items-center space-x-4 text-sm">
         <a href="https://www.linkedin.com/in/mu-mingming-zhang/" target="_blank">
