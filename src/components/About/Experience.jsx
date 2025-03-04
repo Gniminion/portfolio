@@ -4,14 +4,14 @@ function Experience() {
 
   const experiences = [
     {
-      logo: "🏢",
+      logo: "src/assets/mikomiko.png",
       institution: "Mikomiko SG | 2025",
       role: "UX/UI Designer and Product Managment",
       description: "",
     },
     {
-      logo: "🏢",
-      institution: "University of Waterloo, Faculty of Mathematics | 2024",
+      logo: "src/assets/waterloo.png",
+      institution: "University of Waterloo, Mathematics Faculty | 2024",
       role: "Animator for Educational Works",
       description: "Designed, storyboarded, and edited videos for a learning how to learn series.",
     },
@@ -19,21 +19,21 @@ function Experience() {
 
   const education = [
     {
-      logo: "🎓",
+      logo: "src/assets/waterloo.png",
       institution: "University of Waterloo | 2023 - Current",
       degree: "Computational Mathematics & Biostatistics (Bachelor of Mathematics, Honours)",
       description: "Cumulative average ~80%, relevant coursework in statistical analysis, data structures, object oriented programming, bioinformatics, and more.",
     },
     {
-      logo: "🎓",
+      logo: "src/assets/ib.png",
       institution: "Nexus International School | 2020 - 2023",
       degree: "International Baccalaureate Bilingual Diploma",
-      description: "Scored 38 with Higher Level subjects Mathematics, Biology, and Computer Science. High performance in native language literature courses Chinese & English.",
+      description: "Scored 38 with Higher Level subjects Mathematics, Biology, and Computer Science. High performance in native literature courses Chinese & English.",
     },
   ];
 
   return (
-    <div className="max-w-lg mx-auto p-6 bg-dark2 text-white rounded-lg shadow-lg">
+    <div className="max-w-lg mx-auto p-6 bg-dark2 text-white rounded-lg">
 
       <div className="flex rounded-lg p-1">
         <button
@@ -59,30 +59,30 @@ function Experience() {
         </button>
       </div>
 
-      <div className="mt-4 border-2 border-dark3 bg-dark rounded-lg p-6 h-84 overflow-y-auto transition-all">
+      <div className="mt-4 border-2 border-dark3 bg-dark rounded-lg p-6 h-80 overflow-y-auto transition-all">
         {activeTab === "Experience"
           ? experiences.map((exp, index) => (
               <div key={index} className="mb-6">
                 <div className="flex text-left space-x-4">
-                  <span className="text-3xl">{exp.logo}</span>
+                  <img src={exp.logo} alt={exp.institution} style={{height:48, width:48}}/>
                   <div>
                     <h3 className="text-base font-semibold">{exp.role}</h3>
                     <p className="text-sm text-gray">{exp.institution}</p>
                   </div>
                 </div>
-                <p className="text-left ml-12 mt-2 text-sm text-gray">{exp.description}</p>
+                <p className="text-left ml-16 mt-2 text-sm text-gray">{exp.description}</p>
               </div>
             ))
           : education.map((edu, index) => (
               <div key={index} className="mb-6">
                 <div className="flex text-left space-x-4">
-                  <span className="text-3xl">{edu.logo}</span>
+                  <img src={edu.logo} alt={edu.institution} style={{height:48, width:48}}/>
                   <div>
                     <h3 className="text-base font-semibold">{edu.degree}</h3>
                     <p className="text-sm text-gray">{edu.institution}</p>
                   </div>
                 </div>
-                <p className="text-left ml-12 mt-2 text-sm text-gray">{edu.description}</p>
+                <p className="text-left ml-16 mt-2 text-sm text-gray">{edu.description}</p>
               </div>
             ))}
       </div>

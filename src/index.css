@@ -22,6 +22,10 @@
   .text-gray {
     color: #A9AABC;
   }
+  .image{
+    position:relative;
+    top:-20%;
+ }
 }
 
 :root {
@@ -35,7 +39,7 @@
                 Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   line-height: 1.5;
   font-weight: 500;
-  background: "bg-dark";
+  background-color: #070715;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
