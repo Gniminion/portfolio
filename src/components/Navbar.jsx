@@ -21,7 +21,7 @@ function Navbar({ scrollToSection, homeRef, projectsRef, contactRef }) {
           }
         });
       },
-      { rootMargin: "0px", threshold: 0 } 
+      { rootMargin: '0px 0px 0px 0px', threshold: 0 } 
     );
 
     sections.forEach(({ ref, id }) => {
@@ -43,7 +43,7 @@ function Navbar({ scrollToSection, homeRef, projectsRef, contactRef }) {
         <h3 className="text-left ml-4 mt-4">
           Data Analyst <br/>
           UX / UI Designer<br/>
-          Web Developer
+          Aspiring Developer
         </h3>
         <div className="flex ml-4 mt-4 items-center space-x-4 text-sm">
           <a href="https://www.linkedin.com/in/mu-mingming-zhang/" target="_blank">

@@ -9,12 +9,12 @@ function About() {
 
           <div className="col-span-3 flex flex-col gap-6">
             <div className="flex flex-col bg-dark2 rounded-lg h-54 overflow-hidden border-2 border-dark3">
-              <img src="src/assets/me.png" alt="my photo" class="image"/>
+              <img src="me.png" alt="my photo" className="image"/>
             </div>
-            <div className="text-left bg-dark2 p-8 rounded-lg h-54 flex flex-col gap-4">
+            <div className="text-left bg-dark2 p-8 rounded-lg h-54 flex flex-col gap-4 overflow-hidden overflow-y-auto">
             <text className="font-bold"> I'm a  data enthusiast interested in delivering <text className="text-primary"> intuitive visualisations for technical concepts. </text> </text>
               <div>
-                <text className="text-gray">  When I'm not designing or coding, you can also find me editing and translating media!</text>
+                <text className="text-gray">  When I'm not designing or coding, you can also find me editing videos and translating!</text>
               </div>
             </div>
           </div>

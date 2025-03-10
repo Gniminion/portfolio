@@ -1,6 +1,9 @@
 @import "tailwindcss";
 
 @layer utilities {
+  .bg-primary {
+    background-color: #F78C7E;
+  }
   .bg-dark {
     background-color: #070715;
   }
@@ -23,8 +26,9 @@
     color: #A9AABC;
   }
   .image{
-    position:relative;
-    top:-20%;
+    flex:1;
+    height: undefined;
+    width: undefined;
  }
 }
 

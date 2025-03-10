@@ -4,13 +4,13 @@ function Experience() {
 
   const experiences = [
     {
-      logo: "src/assets/mikomiko.png",
+      logo: "mikomiko.png",
       institution: "Mikomiko SG | 2025",
       role: "UX/UI Designer and Product Managment",
       description: "",
     },
     {
-      logo: "src/assets/waterloo.png",
+      logo: "waterloo.png",
       institution: "University of Waterloo, Mathematics Faculty | 2024",
       role: "Animator for Educational Works",
       description: "Designed, storyboarded, and edited videos for a learning how to learn series.",
@@ -19,13 +19,19 @@ function Experience() {
 
   const education = [
     {
-      logo: "src/assets/waterloo.png",
+      logo: "waterloo.png",
       institution: "University of Waterloo | 2023 - Current",
       degree: "Computational Mathematics & Biostatistics (Bachelor of Mathematics, Honours)",
       description: "Cumulative average ~80%, relevant coursework in statistical analysis, data structures, object oriented programming, bioinformatics, and more.",
     },
     {
-      logo: "src/assets/ib.png",
+      logo: "coursera.png",
+      institution: "Coursera | 2024",
+      degree: "Google Data Analytics Certificate",
+      description: "Completed modules in both theortical foundations (ecosystems, databases, evaluation metrics...) and practical tools with Excel, SQL, R, and Tableau.",
+    },
+    {
+      logo: "ib.png",
       institution: "Nexus International School | 2020 - 2023",
       degree: "International Baccalaureate Bilingual Diploma",
       description: "Scored 38 with Higher Level subjects Mathematics, Biology, and Computer Science. High performance in native literature courses Chinese & English.",

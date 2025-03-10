@@ -15,6 +15,7 @@
   "dependencies": {
     "@ant-design/icons": "^5.6.1",
     "@ant-design/icons-react-native": "^2.3.2",
+    "@emailjs/browser": "^4.4.1",
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
     "@fortawesome/free-brands-svg-icons": "^6.7.2",
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
@@ -22,9 +23,11 @@
     "@icons-pack/react-simple-icons": "^12.0.0",
     "@tailwindcss/vite": "^4.0.9",
     "antd": "^5.24.2",
+    "emailjs": "^4.0.3",
     "lucide-react": "^0.477.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-hook-form": "^7.54.2",
     "react-obfuscate-email": "^1.1.5"
   },
   "devDependencies": {

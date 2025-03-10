@@ -1,8 +1,8 @@
-import { useState, useEffect, useRef } from "react";
-import { Email } from "react-obfuscate-email";
+import { useRef } from "react";
 import Navbar from './components/Navbar';
 import Project from './components/Projects/Projects';
 import About from "./components/About/About";
+import Contact from "./components/Contact";
 import './App.css'
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
 
   const scrollToSection = (ref) => {
     ref.current?.scrollIntoView({ behavior: "smooth" });
-    window.scrollTo(0, -16);
+    window.scrollTo(0, 0);
   };
 
   return (
@@ -31,11 +31,9 @@ function App() {
           <Project/>
         </section>
 
-        <section ref={contactRef} className="min-h-screen flex items-center justify-center">
-          <div className="text-center flex flex-col">
-            <h2 className="text-3xl font-bold">Contact</h2>
-            <Email className="text-primary" email="mingmingzhangcd@gmail.com">Email</Email>
-          </div>
+        <section ref={contactRef} className="min-h-screen mt-8 -mb-8 flex flex-col justify-center">
+          <h2 className="text-left text-3xl font-bold">Contact</h2>
+          <Contact/>
         </section>
       </div>
     </div>

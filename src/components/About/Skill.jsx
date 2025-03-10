@@ -8,9 +8,9 @@ function Skill() {
     { logo: faGitAlt, name: "Git", description: "Version control" },
     { logo: faRProject, name: "R", description: "Statistical analysis" },
     { logo: faDatabase, name: "SQL", description: "Database queries" },
-    { logo: faPython, name: "Python", description: "Data science" },
-    { logo: faReact, name: "React", description: "Web development" },
-    { logo: faCss3Alt, name: "Tailwind", description: "Web development" },
+    { logo: faPython, name: "Pandas | Python", description: "Data analysis" },
+    { logo: faReact, name: "React | JS", description: "Web development" },
+    { logo: faCss3Alt, name: "Tailwind | CSS", description: "Web development" },
     { logo: faFigma, name: "Figma", description: "UI mockups" },
     { logo: faPenNib, name: "Adobe Suite", description: "Graphic design" },
   ];
@@ -21,7 +21,7 @@ function Skill() {
         <h2 className="text-left text-xl font-bold text-white mb-4 -mt-2">Skills</h2>
         <div className=" grid grid-cols-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {skills.map((skill, index) => (
-            <div key={index} className=" border-2 border-dark3 flex text-left items-center bg-dark text-white p-4 rounded-md shadow-md w-full">
+            <div key={index} className=" border-2 border-dark3 flex text-left items-center bg-dark text-white p-4 rounded-md shadow-md w-full overflow-hidden">
               <FontAwesomeIcon icon={skill.logo} size="2x" className="mr-4 text-primary" />
               <img 
                 src={skills.logo} 
