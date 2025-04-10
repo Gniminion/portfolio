@@ -4,7 +4,7 @@ import Experience from "./Experience";
 function About() {
   return (
     <div className="flex-1 overflow-auto">
-      <div className="p-6 text-white">
+      <div className="mt-4 text-white">
         <div className="grid grid-cols-7 gap-6">
 
           <div className="col-span-3 flex flex-col gap-6">

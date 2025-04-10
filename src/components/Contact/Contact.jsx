@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import Map from './Map.jsx';
 
 function Contact() {
   const form = useRef();
@@ -25,9 +26,11 @@ function Contact() {
   };
 
   return (
-    <div className="p-6 text-white">
+    <div className="mt-4 text-white">
       <div className="grid grid-cols-7 gap-6">
-        <div className="text-left col-span-4 flex flex-col p-6 bg-dark2 rounded-lg shadow-lg"> </div>
+        <div className="text-left col-span-4 flex flex-col p-6 bg-dark2 rounded-lg shadow-lg"> 
+          <Map/> 
+        </div>
         <form ref={form} onSubmit={sendEmail} className="text-left col-span-3 flex flex-col p-6 bg-dark2 rounded-lg shadow-lg">
 
           <label className=" text-md font-semibold mb-2" htmlFor="user_name">Name</label>
@@ -69,7 +72,7 @@ function Contact() {
           <p className="text-primary">Email sent successfully!</p>
           )}
           {status === 'FAILED' && (
-          <p className="text-gray">Failed to send the email. Please try again later.</p>
+          <p className="text-gray">Failed to send email. Please try again later.</p>
           )}
         </form>
         

@@ -27,16 +27,16 @@ function Projects() {
     : projects.filter(project => project.category.includes(activeCat));
 
   return (
-    <section className="text-white">
+    <section className="text-white text-sm flex flex-col">
       <div className="flex space-x-4 mb-6">
         {categories.map(category => (
           <button
             key={category}
             onClick={() => setactiveCat(category)}
-            className={`px-4 py-2 rounded-lg transition-all duration-300 ${
+            className={`px-3 py-2 rounded-lg transition-all duration-300 ${
               activeCat === category 
                 ? "border-2 border-primary text-white" 
-                : "border-2 border-dark3 text-gray hover:bg-dark2 hover:cursor-pointer"
+                : "border-2 border-dark3 text-gray hover:cursor-pointer"
             }`}
           >
             {category}
@@ -44,7 +44,7 @@ function Projects() {
         ))}
       </div>
 
-      <div className="grid grid-cols-1 gap-8">
+      <div className="grid grid-cols-1 gap-8 p-4 -mt-4">
         {filtered.map((project, index) => (
           <a href={project.link} target="_blank" >
             <ProjCard key={index} title={project.title} image={project.image} desc={project.desc}/>

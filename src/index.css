@@ -1,9 +1,6 @@
 @import "tailwindcss";
 
 @layer utilities {
-  .bg-primary {
-    background-color: #F78C7E;
-  }
   .bg-dark {
     background-color: #070715;
   }
@@ -12,6 +9,9 @@
   }
   .bg-dark3 {
     background-color: #454655;
+  }
+  .bg-primary {
+    background-color: #F78C7E;
   }
   .border-dark3 {
     border-color: #454655; 
