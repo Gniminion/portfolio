@@ -17,9 +17,9 @@ function Skill() {
   
   
     return (
-      <div className="p-8">
+      <div className="p-8 overflow-auto">
         <h2 className="text-left text-xl font-bold text-white mb-4 -mt-2">Skills</h2>
-        <div className=" grid grid-cols-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div className=" grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {skills.map((skill, index) => (
             <div key={index} className=" border-2 border-dark3 flex text-left items-center bg-dark text-white p-4 rounded-md shadow-md w-full overflow-hidden">
               <FontAwesomeIcon icon={skill.logo} size="2x" className="mr-4 text-primary" />

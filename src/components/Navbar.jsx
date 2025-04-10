@@ -8,6 +8,11 @@ function Navbar({ scrollToSection, homeRef, projectsRef, contactRef }) {
   const [open, setOpen] = useState(true);
 
   useEffect(() => {
+    const smView = window.matchMedia("(max-width: 960px)").matches;
+    setOpen(!smView);
+  }, []);
+
+  useEffect(() => {
     const sections = [
       { ref: homeRef, id: "home" },
       { ref: projectsRef, id: "projects" },

@@ -20,18 +20,18 @@ function App() {
     <div className="flex h-screen bg-dark text-white overflow-hidden">
       <Navbar scrollToSection={scrollToSection} homeRef={homeRef} projectsRef={projectsRef} contactRef={contactRef} />
       
-      <div className="flex-1 ml-8 overflow-auto p-12">
-        <section ref={homeRef} className="min-h-screen -mt-8">
+      <div className="flex-1 overflow-auto p-12 min-h-screen">
+        <section ref={homeRef} className=" -mt-4">
           <h2 className="text-left text-3xl font-bold">About</h2>
           <About/>
         </section>
 
-        <section ref={projectsRef} className="min-h-screen mt-8">
+        <section ref={projectsRef} className="mt-8">
           <h2 className="text-left text-3xl font-bold mb-8">Projects</h2>
           <Project/>
         </section>
 
-        <section ref={contactRef} className="min-h-screen mt-8 -mb-8 flex flex-col justify-center">
+        <section ref={contactRef} className="mt-8 -mb-4">
           <h2 className="text-left text-3xl font-bold">Contact</h2>
           <Contact/>
         </section>

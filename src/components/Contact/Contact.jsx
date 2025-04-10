@@ -27,36 +27,33 @@ function Contact() {
 
   return (
     <div className="mt-4 text-white">
-      <div className="grid grid-cols-7 gap-6">
-        <div className="text-left col-span-4 flex flex-col p-6 bg-dark2 rounded-lg shadow-lg"> 
+      <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
+        <div className="text-left lg:col-span-3 sm:col-span-1 p-4 bg-dark2 rounded-lg h-[564px]"> 
           <Map/> 
         </div>
-        <form ref={form} onSubmit={sendEmail} className="text-left col-span-3 flex flex-col p-6 bg-dark2 rounded-lg shadow-lg">
+        <form ref={form} onSubmit={sendEmail} className="text-left lg:col-span-2 sm:col-span-1 flex flex-col p-8 bg-dark2 rounded-lg">
 
-          <label className=" text-md font-semibold mb-2" htmlFor="user_name">Name</label>
+          <label className=" text-md font-semibold mb-2" >Name</label>
           <input
             type="text"
             name="user_name"
-            id="user_name"
             required
             className="text-sm mb-4 p-2 rounded-md border-2 border-dark3 bg-dark text-gray focus:outline-none"
             placeholder="Your Name"
           />
 
-          <label className=" text-md font-semibold mb-2" htmlFor="user_email">Email</label>
+          <label className=" text-md font-semibold mb-2" >Email</label>
           <input
             type="email"
             name="user_email"
-            id="user_email"
             required
             className="text-sm mb-4 p-2 rounded-md border-2 border-dark3 bg-dark text-gray focus:outline-none"
             placeholder="Your Email"
           />
 
-          <label className=" text-md font-semibold mb-2" htmlFor="message">Message</label>
+          <label className=" text-md font-semibold mb-2" >Message</label>
           <textarea
             name="message"
-            id="message"
             required
             className="text-sm mb-4 p-2 rounded-md border-2 border-dark3 bg-dark text-gray focus:outline-none"
             placeholder="Your Message"

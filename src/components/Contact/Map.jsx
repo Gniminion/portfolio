@@ -10,7 +10,6 @@ const Icon = L.icon({
   popupAnchor: [1, -34],
 });
 
-
 const position = [43.47, -80.54];
 
 function Map() {
@@ -19,8 +18,7 @@ function Map() {
       center={position} 
       zoom={5} 
       scrollWheelZoom={false} 
-      style={{ height: "100%", width: "100%" }}
-      className="rounded-lg"
+      className="rounded-lg w-full h-full"
     >
       <TileLayer
         attribution='&copy; <a href="https://carto.com/">Carto</a>'

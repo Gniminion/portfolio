@@ -6,8 +6,8 @@ function Experience() {
     {
       logo: "mikomiko.png",
       institution: "Mikomiko SG | 2025",
-      role: "UX/UI Designer and Product Managment",
-      description: "",
+      role: "UX/UI Designer and Product Management",
+      description: "Providing intuitive user interfaces for a AI tool platform.",
     },
     {
       logo: "waterloo.png",
@@ -21,25 +21,25 @@ function Experience() {
     {
       logo: "waterloo.png",
       institution: "University of Waterloo | 2023 - Current",
-      degree: "Computational Mathematics & Biostatistics (Bachelor of Mathematics, Honours)",
-      description: "Cumulative average ~80%, relevant coursework in statistical analysis, data structures, object oriented programming, bioinformatics, and more.",
+      degree: "Bachelor of Mathematics (Computational Mathematics & Biostatistics)",
+      description: "Relevant coursework in statistical analysis, data structures, object oriented programming, bioinformatics, and more.",
     },
     {
       logo: "coursera.png",
       institution: "Coursera | 2024",
       degree: "Google Data Analytics Certificate",
-      description: "Completed modules in both theortical foundations (ecosystems, databases, evaluation metrics...) and practical tools with Excel, SQL, R, and Tableau.",
+      description: "Completed modules in database foundations and computational tools with Excel, SQL, R, and Tableau.",
     },
     {
       logo: "ib.png",
       institution: "Nexus International School | 2020 - 2023",
       degree: "International Baccalaureate Bilingual Diploma",
-      description: "Scored 38 with Higher Level subjects Mathematics, Biology, and Computer Science. High performance in native literature courses Chinese & English.",
+      description: "High scoring in Higher Level Mathematics, Biology, and Computer Science.",
     },
   ];
 
   return (
-    <div className="max-w-lg mx-auto p-6 bg-dark2 text-white rounded-lg">
+    <div className=" mx-auto p-6 bg-dark2 text-white rounded-lg">
 
       <div className="flex rounded-lg p-1">
         <button
@@ -65,7 +65,7 @@ function Experience() {
         </button>
       </div>
 
-      <div className="mt-4 border-2 border-dark3 bg-dark rounded-lg p-6 h-80 overflow-y-auto transition-all">
+      <div className="mt-4 border-2 border-dark3 bg-dark rounded-lg p-8 overflow-y-auto transition-all h-92">
         {activeTab === "Experience"
           ? experiences.map((exp, index) => (
               <div key={index} className="mb-6">
