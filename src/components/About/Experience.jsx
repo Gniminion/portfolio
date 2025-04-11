@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 function Experience() {
   const [activeTab, setActiveTab] = useState("Experience");
 
@@ -11,7 +12,7 @@ function Experience() {
     },
     {
       logo: "waterloo.png",
-      institution: "University of Waterloo, Mathematics Faculty | 2024",
+      institution: "UW Mathematics Faculty | 2024",
       role: "Animator for Educational Works",
       description: "Designed, storyboarded, and edited videos for a learning how to learn series.",
     },
@@ -20,7 +21,7 @@ function Experience() {
   const education = [
     {
       logo: "waterloo.png",
-      institution: "University of Waterloo | 2023 - Current",
+      institution: "University of Waterloo | 2023 - 2028",
       degree: "Bachelor of Mathematics (Computational Mathematics & Biostatistics)",
       description: "Relevant coursework in statistical analysis, data structures, object oriented programming, bioinformatics, and more.",
     },
@@ -39,60 +40,72 @@ function Experience() {
   ];
 
   return (
-    <div className=" mx-auto p-6 bg-dark2 text-white rounded-lg">
-
-      <div className="flex rounded-lg p-1">
+    <div className="mx-auto p-4 md:p-6 bg-dark2 text-white rounded-lg">
+      <div className="flex rounded-lg">
         <button
-          className={`hover:cursor-pointer border-2 border-dark3 flex-1 px-2 py-1 rounded-l-lg transition-all duration-300 ${
+          className={`hover:cursor-pointer border-2 border-dark3 flex-1 px-2 py-2 rounded-l-lg transition-all duration-300 ${
             activeTab === "Experience"
               ? "bg-dark3 text-white font-semibold"
               : "bg-dark text-gray"
           }`}
           onClick={() => setActiveTab("Experience")}
         >
-          <span className="text-sm">Experience</span>
+          <span className="text-sm md:text-base">Experience</span>
         </button>
 
         <button
-          className={`hover:cursor-pointer border-2 border-dark3 flex-1 px-2 py-1 rounded-r-lg transition-all duration-300 ${
+          className={`hover:cursor-pointer border-2 border-dark3 flex-1 px-2 py-2 rounded-r-lg transition-all duration-300 ${
             activeTab === "Education"
               ? "bg-dark3 text-white font-semibold"
               : "bg-dark text-gray"
           }`}
           onClick={() => setActiveTab("Education")}
         >
-          <span className="text-sm">Education</span>
+          <span className="text-sm md:text-base">Education</span>
         </button>
       </div>
 
-      <div className="mt-4 border-2 border-dark3 bg-dark rounded-lg p-8 overflow-y-auto transition-all h-92">
+      <div className="mt-4 border-2 border-dark3 bg-dark rounded-lg p-4 overflow-y-auto transition-all max-h-[400px]">
         {activeTab === "Experience"
           ? experiences.map((exp, index) => (
-              <div key={index} className="mb-6">
-                <div className="flex text-left space-x-4">
-                  <img src={exp.logo} alt={exp.institution} style={{height:48, width:48}}/>
-                  <div>
-                    <h3 className="text-base font-semibold">{exp.role}</h3>
-                    <p className="text-sm text-gray">{exp.institution}</p>
+              <div key={index} className="mb-6 last:mb-0">
+                <div className="flex text-left items-start gap-3">
+                  <img 
+                    src={exp.logo} 
+                    alt={exp.institution} 
+                    className="h-10 w-10 md:h-12 md:w-12 flex-shrink-0 object-contain"
+                  />
+                  <div className="flex-1 min-w-0"> 
+                    <h3 className="text-sm md:text-base font-semibold break-words">{exp.role}</h3>
+                    <p className="text-xs md:text-sm text-gray">{exp.institution}</p>
                   </div>
                 </div>
-                <p className="text-left ml-16 mt-2 text-sm text-gray">{exp.description}</p>
+                <p className="text-left mt-2 text-xs md:text-sm text-gray pl-[52px] md:pl-15 break-words">
+                  {exp.description}
+                </p>
               </div>
             ))
           : education.map((edu, index) => (
-              <div key={index} className="mb-6">
-                <div className="flex text-left space-x-4">
-                  <img src={edu.logo} alt={edu.institution} style={{height:48, width:48}}/>
-                  <div>
-                    <h3 className="text-base font-semibold">{edu.degree}</h3>
-                    <p className="text-sm text-gray">{edu.institution}</p>
+              <div key={index} className="mb-6 last:mb-0">
+                <div className="flex text-left items-start gap-3">
+                  <img 
+                    src={edu.logo} 
+                    alt={edu.institution} 
+                    className="h-10 w-10 md:h-12 md:w-12 flex-shrink-0 object-contain"
+                  />
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-sm md:text-base font-semibold break-words">{edu.degree}</h3>
+                    <p className="text-xs md:text-sm text-gray">{edu.institution}</p>
                   </div>
                 </div>
-                <p className="text-left ml-16 mt-2 text-sm text-gray">{edu.description}</p>
+                <p className="text-left mt-2 text-xs md:text-sm text-gray pl-[52px] md:pl-16 break-words">
+                  {edu.description}
+                </p>
               </div>
             ))}
       </div>
     </div>
   );
 }
-export default Experience
+
+export default Experience;

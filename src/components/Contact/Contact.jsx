@@ -27,52 +27,57 @@ function Contact() {
 
   return (
     <div className="mt-4 text-white">
-      <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
-        <div className="text-left lg:col-span-3 sm:col-span-1 p-4 bg-dark2 rounded-lg h-[564px]"> 
+      <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
+        <div className="lg:col-span-3 bg-dark2 rounded-lg h-[282px] lg:h-[564px]"> 
           <Map/> 
         </div>
-        <form ref={form} onSubmit={sendEmail} className="text-left lg:col-span-2 sm:col-span-1 flex flex-col p-8 bg-dark2 rounded-lg">
-
-          <label className=" text-md font-semibold mb-2" >Name</label>
+        
+        <form 
+          ref={form} 
+          onSubmit={sendEmail} 
+          className="text-left lg:col-span-2 flex flex-col p-4 sm:p-6 bg-dark2 rounded-lg"
+        >
+          <label className="text-sm sm:text-md font-semibold mb-2">Name</label>
           <input
             type="text"
             name="user_name"
             required
-            className="text-sm mb-4 p-2 rounded-md border-2 border-dark3 bg-dark text-gray focus:outline-none"
+            className="text-sm p-2 rounded-md border-2 border-dark3 bg-dark text-gray focus:outline-none mb-4"
             placeholder="Your Name"
           />
 
-          <label className=" text-md font-semibold mb-2" >Email</label>
+          <label className="text-sm sm:text-md font-semibold mb-2">Email</label>
           <input
             type="email"
             name="user_email"
             required
-            className="text-sm mb-4 p-2 rounded-md border-2 border-dark3 bg-dark text-gray focus:outline-none"
+            className="text-sm p-2 rounded-md border-2 border-dark3 bg-dark text-gray focus:outline-none mb-4"
             placeholder="Your Email"
           />
 
-          <label className=" text-md font-semibold mb-2" >Message</label>
+          <label className="text-sm sm:text-md font-semibold mb-2">Message</label>
           <textarea
             name="message"
             required
-            className="text-sm mb-4 p-2 rounded-md border-2 border-dark3 bg-dark text-gray focus:outline-none"
+            className="text-sm p-2 rounded-md border-2 border-dark3 bg-dark text-gray focus:outline-none mb-4"
             placeholder="Your Message"
-            rows="10"
+            rows="6"
           ></textarea>
 
-          <input
-            type="submit"
-            value="Send"
-            className="mt-2 mb-2 p-2 rounded-md bg-primary font-semibold cursor-pointer hover:bg-primary-dark transition-colors"
-          />
-          {status === 'SUCCESS' && (
-          <p className="text-primary">Email sent successfully!</p>
-          )}
-          {status === 'FAILED' && (
-          <p className="text-gray">Failed to send email. Please try again later.</p>
-          )}
+          <div className="flex flex-col items-center">
+            <input
+              type="submit"
+              value="Send Email"
+              className="w-full px-6 py-2 rounded-md bg-primary font-semibold cursor-pointer hover:bg-primary-dark transition-colors"
+            />
+            {status === 'SUCCESS' && (
+              <p className="text-primary mt-2 text-sm sm:text-base">Email sent successfully!</p>
+            )}
+            {status === 'FAIL' && (
+              <p className="text-gray mt-2 text-sm sm:text-base">Failed to send email. Please try again later.</p>
+            )}
+          </div>
         </form>
-        
       </div>
     </div>
   );
