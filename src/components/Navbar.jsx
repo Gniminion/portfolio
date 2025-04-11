@@ -62,7 +62,7 @@ function Navbar({ scrollToSection, homeRef, projectsRef, contactRef }) {
           ${open ? "w-60 p-12" : "w-14 p-4"}
         `}
       >
-        <div className="flex justify-end">
+        <div className="flex justify-end px-1/2">
           <button className="cursor-pointer"
             onClick={() => setOpen(!open)}
           >
@@ -94,14 +94,14 @@ function Navbar({ scrollToSection, homeRef, projectsRef, contactRef }) {
           )}
         </div>
 
-        <div className={`flex items-center ${open ? "space-x-4" : "flex-col space-y-4"} transition-all duration-300 cursor-pointer`}>
+        <div className={`flex items-center ${open ? "space-x-4" : "flex-col space-y-4"} transition-all duration-300`}>
           <a href="https://www.linkedin.com/in/mu-mingming-zhang/" target="_blank" rel="noreferrer">
-            <button className="text-white hover:text-primary transition">
+            <button className="text-white hover:text-primary transition cursor-pointer">
               <FontAwesomeIcon icon={faLinkedin} className="text-2xl" />
             </button>
           </a>
           <a href="https://github.com/Gniminion" target="_blank" rel="noreferrer">
-            <button className="text-white hover:text-primary transition">
+            <button className="text-white hover:text-primary transition cursor-pointer">
               <FontAwesomeIcon icon={faGithub} className="text-2xl" />
             </button>
           </a>

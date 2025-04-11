@@ -40,7 +40,7 @@ function Projects() {
       );
 
   return (
-    <section className="text-white text-sm flex flex-col w-full px-4">
+    <section className="text-white text-sm flex flex-col w-full">
       <div className="flex space-x-4 mb-6 overflow-x-auto pb-2 hide-scrollbar">
         {categories.map(category => (
           <button
