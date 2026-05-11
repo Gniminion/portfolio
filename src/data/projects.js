@@ -3,7 +3,7 @@ export const CATEGORIES = ["All", "Data", "Design", "Development"];
 export const PROJECTS = [
   { 
     title: "ProtectSUS", 
-    category: ["Development", "Design"], 
+    category: ["Design", "Development"], 
     image: "protectsus.webp", 
     desc: "AI powered code auditor with GitHub integration that debates findings and generates PRs.",
     priority: true,
@@ -178,13 +178,53 @@ We learned how to distill complex data into a [comprehensive report](https://doc
     
   },
   { 
+    title: "MikoMiko Product Website", 
+    category: ["Design", "Development"], 
+    image: "mikoai.webp",
+    desc: "Developing an info site for an AI platform, increasing traction for product and recruitment.",
+    priority: false,
+    link: "https://mikomiko.ai",
+    tags: ["React", "Tailwind CSS", "Figma", "Next.js", "Git", "SEO"],
+    fullDescription: {
+      role: ` UI/UX Designer
+      Frontend Developer`,
+    
+      duration: `4 Months
+      May - Aug 2025`,
+
+      deliverables:`Source Code
+      Figma Designs
+      `,
+    
+      team: `Independent Project for Mikomiko SG`,
+    },
+  },
+  { 
     title: "BloomWatch", 
-    category: ["Design", "Data"], 
+    category: ["Data", "Design"], 
     image: "bloomwatch.webp",
     desc: "Using satellite data to predict wildflower blooms. NASA Space Apps 2025 global nominee.",
     priority: false,
-    link: "https://www.spaceappschallenge.org/2025/find-a-team/mgmu/?tab=project",
+    link: "https://youtu.be/EMwjfaa0v68",
     tags: ["Python", "MODIS Data", "Predictive Modelling", "Data Visualisation"],
+    fullDescription: {
+      role: ` Data Analyst
+      Project Manager
+      Researcher`,
+    
+      duration: `48 Hours
+      Oct 2025`,
+
+      deliverables:`Web Application
+      Mobile Design
+      Demo Video
+      Source Code
+      `,
+    
+      team: `4 Members
+      For NASA Space Apps 2025
+      Global Nominee and Canadian Top Placer`,
+    },
   },
   { 
     title: "Modelling Cancer on a Chip Systems", 
@@ -193,7 +233,22 @@ We learned how to distill complex data into a [comprehensive report](https://doc
     desc: "Using biological and mathematical models to understand and advance tumour drug delivery systems.",
     priority: false,
     link: "https://drive.google.com/file/d/1DG7go2jheZ0MGaO-mX_jS8KRhXHsdW-J/view?usp=drive_link",
-    tags: ["Research", "COSMOL", "Mathematical Modelling"]
+    tags: ["Research", "COSMOL", "Mathematical Modelling"],
+    fullDescription: {
+      role: ` Researcher
+      Presenter`,
+    
+      duration: `4 Months
+      May - Aug 2025`,
+
+      deliverables:`Presentation Slides
+      Mathematical Models
+      `,
+    
+      team: `3 Mentees
+      For Directed Reading Program
+      University of Waterloo`,
+    },
   },
   // { 
   //   title: "Subletting in California", 
@@ -212,25 +267,33 @@ We learned how to distill complex data into a [comprehensive report](https://doc
     priority: false,
     link: "https://www.youtube.com/@LearnMoreWithDanWolczuk/videos",
     tags: ["Photoshop", "Premiere Pro", "Storyboarding", "Animation"],
+    fullDescription: {
+      role: `Animator
+      Video Editor
+      Storyboarder`,
+    
+      duration: `4 Months
+      May - Aug 2024`,
+
+      deliverables:`12 Educational Videos
+      Animation Assets
+      Thumbnail Designs
+      Translation Subtitles
+      `,
+    
+      team: `Collaboration with Prof. Dan Wolczuk
+      University of Waterloo`,
+    },
   }, 
-  { 
-    title: "MikoMiko Product Website", 
-    category: ["Design", "Development"], 
-    image: "mikoai.webp",
-    desc: "Developing an info site for an AI platform, increasing traction for product and recruitment.",
-    priority: false,
-    link: "https://mikomiko.ai",
-    tags: ["React", "Tailwind CSS", "Figma", "Next.js", "Git", "SEO"]
-  },
-  { 
-    title: "Conference Tracker", 
-    category: ["Data", "Development"], 
-    image: "contrack.webp",
-    desc: "A tool for front desk workers to efficiently manage attendee information and check in process.",
-    priority: false,
-    link: "https://github.com/Gniminion/conference-tracker",
-    tags: ["Java", "SwingGUI", "OOP", "Prototyping"]
-  },
+  // { 
+  //   title: "Conference Tracker", 
+  //   category: ["Data", "Development"], 
+  //   image: "contrack.webp",
+  //   desc: "A tool for front desk workers to efficiently manage attendee information and check in process.",
+  //   priority: false,
+  //   link: "https://github.com/Gniminion/conference-tracker",
+  //   tags: ["Java", "SwingGUI", "OOP", "Prototyping"]
+  // },
   { 
     title: "Personal Art Portfolio", 
     category: ["Design"], 
@@ -252,16 +315,25 @@ We learned how to distill complex data into a [comprehensive report](https://doc
 ];
 
 export const PAPERS = [
-  { title: "Machine Translation in Human Oriented Workplaces", category: "IT",
+  { title: "Machine Translation in Human Oriented Workplaces", category: "HCI",
+    year: "2023",
     desc: "Machine translation covers the task of preserving the meaning of the input text and producing fluent text in the output language. As machine translation tools become more prevalent in daily life, there are, of course, benefits and drawbacks. This paper attempts to provide a holistic perspective in translation machines and human interaction by interviewing industry professionals.",
     link: "https://drive.google.com/file/d/1LIBhIGGU2dM3YiRdivpGxKs3GqQOslPe/view?usp=drive_link" },
+  { title: "Rationality and Emotion in Permadeath Game Design",  category: "Game Theory",
+    year: "2025",
+    desc: "A non rigourous study of how permadeath transforms game theory into emotional experience using Risk of Rain 2 as a case study. Analysis demonstrates psychological triggers like greed and the sunk-cost fallacy drive irrational play to create engagement.",
+    link: "https://drive.google.com/file/d/1EBHBK5NG58tck8u1gWbJglPOeoSglNmo/view?usp=sharing" }, 
+  { title: "Comparing Shiny Hunting Methods in Generation 5 Pokemon Games",  category: "Statistics",
+    year: "2024",
+    desc: "A short statstical exploration applying the Poisson distribution on encounter and hatching rates to find a optimal method in aquiring a shiny Axew in Pokemon Black and White games.",
+    link: "https://drive.google.com/file/d/1laTHjA4geHkGhKSTaHqzkBBX6ZgArRoG/view?usp=drive_link" },  
   { title: "Evaluating the Iconic Design Behind the Ramune Bottle", category: "Mathematics", 
+    year: "2023",
     desc: "This mathematical investigation aims to understand the structure and related volume of the Codd neck bottle in the hopes of finding why alterations have been made that takes away from its original authenticity, using applications of integration (volumes of revolution), geometric visualisation, and polynomial interpolations with matricies.",
     link: "https://drive.google.com/file/d/13-ZeC8RwwzlLL3vGj4JQjwpHCcQwB93d/view?usp=drive_link" },
-  { title: "Investigating Osmolarity in Relation to Mitosis Rate in Meristem Cells", category: "Biology",
-    desc: "A month long project involving collecting both quantitative and qualitative data using laboratory techniques. The results of this paper supports the hypothesis that higher osmolarity limits mitosis and the cell division process in Allium cepa root meristem cells.",
-    link: "https://drive.google.com/file/d/15A94JMMRH8zltPuQeRgWzNTQX3K2LSte/view?usp=drive_link" },
-  { title: "Comparing Shiny Hunting Methods in Generation 5 Pokemon Games",  category: "Mathematics",
-    desc: "A short statstical exploration applying the Poisson distribution on encounter and hatching rates to find a optimal method in aquiring a shiny Axew.",
-    link: "https://drive.google.com/file/d/1laTHjA4geHkGhKSTaHqzkBBX6ZgArRoG/view?usp=drive_link" },  
+  // { title: "Investigating Osmolarity in Relation to Mitosis Rate in Meristem Cells", category: "Biology",
+  //   year: "2023",
+  //   desc: "A month long project involving collecting both quantitative and qualitative data using laboratory techniques. The results of this paper supports the hypothesis that higher osmolarity limits mitosis and the cell division process in Allium cepa root meristem cells.",
+  //   link: "https://drive.google.com/file/d/15A94JMMRH8zltPuQeRgWzNTQX3K2LSte/view?usp=drive_link" },
+  
 ];

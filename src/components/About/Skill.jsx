@@ -26,10 +26,10 @@ function Skill() {
   };
 
   return (
-    <div className="p-6 overflow-auto">
+    <div className=" overflow-auto">
       <h2 className="text-left text-xl  text-white mb-4">My Stack</h2>
       <motion.div 
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2"
         variants={container}
         initial="hidden"
         whileInView="show"
@@ -39,7 +39,7 @@ function Skill() {
           <motion.div 
             key={index} 
             variants={item}
-            className="border border-dark3 flex text-left items-center bg-dark text-white p-4 rounded-md w-full overflow-hidden"
+            className=" bg-dark2 flex text-left items-center bg-dark text-white p-4  w-full overflow-hidden"
           >
             <FontAwesomeIcon icon={skill.logo} size="2x" className="mr-4 text-primary" />
             <div>

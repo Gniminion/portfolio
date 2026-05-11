@@ -16,7 +16,7 @@ function ProjectSection({
   };
 
   return (
-    <section id={id} ref={forwardedRef} className="mb-16">
+    <section id={id} ref={forwardedRef} className="mb-12">
       <h2 className="text-2xl mb-6 font-heading">{title}</h2>
       <div className="prose prose-invert max-w-none">
         <ReactMarkdown
@@ -40,7 +40,7 @@ function ProjectSection({
           <img 
             src={getImagePath(image.src)} 
             alt={image.caption}
-            className="w-full rounded-lg"
+            className="w-full"
             loading="lazy"
           />
           <figcaption className="mt-2 text-sm text-gray text-center">

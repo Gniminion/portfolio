@@ -7,8 +7,8 @@ export const SOCIAL_LINKS = {
 };
 
 export const RESUME_LINKS = {
-  design: "https://drive.google.com/file/d/1gEpBPREDA1-45ev4s0xq_p_G-AL14o7E/view?usp=sharing",
   data: "https://drive.google.com/file/d/1ADIf70muNJ8-3cfBq9fl_phIe-qyPsNJ/view?usp=sharing",
+  design: "https://drive.google.com/file/d/1gEpBPREDA1-45ev4s0xq_p_G-AL14o7E/view?usp=sharing",
   development: "https://drive.google.com/file/d/1WlBkeJLJegctwOMq939ofD5V0Y3ma_qc/view?usp=sharing"
 };
 
@@ -19,7 +19,7 @@ export const PROFILE_IMAGE = {
   
   export const ABOUT_TEXT = {
     highlight: "I'm a data enthusiast interested in delivering intuitive visualisations for technical concepts.",
-    description: "People call me MingMing, and a lot of my interests relate to nerdy media. When I'm not designing or coding, you can also find me editing videos and translating!"
+    description: "People call me MingMing, and a lot of my interests relate to nerdy media. When I'm not designing or coding, you can also find me making origamis and translating!"
   }; 
   
 export const EXPERIENCES = [
@@ -65,12 +65,12 @@ export const EDUCATION = [
   ];
 
 export const SKILLS = [
-    { logo: faGitAlt, name: "Git", description: "Version control" },
-    { logo: faRProject, name: "R", description: "Data analysis" },
-    { logo: faDatabase, name: "SQL", description: "Data analysis" },
-    { logo: faPython, name: "Pandas · Python", description: "Data analysis" },
-    { logo: faReact, name: "React · JS · TS", description: "Frontend dev" },
-    { logo: faCss3Alt, name: "Tailwind · CSS", description: "Frontend dev" },
-    { logo: faFigma, name: "Figma", description: "UI design" },
-    { logo: faPenNib, name: "Adobe Suite", description: "Graphic design" },
+    { logo: faGitAlt, name: "Git", description: "Version Control" },
+    { logo: faRProject, name: "R", description: "Data Analysis" },
+    { logo: faDatabase, name: "SQL", description: "Data Analysis" },
+    { logo: faPython, name: "Pandas · Python", description: "Data Analysis" },
+    { logo: faReact, name: "React · JS · TS", description: "Frontend Development" },
+    { logo: faCss3Alt, name: "Tailwind · CSS", description: "Frontend Development" },
+    { logo: faFigma, name: "Figma", description: "UI/UX Design" },
+    { logo: faPenNib, name: "Adobe Suite", description: "Graphic Design" },
   ];

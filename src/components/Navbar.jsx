@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faHome, faLayerGroup, faPaperPlane, faBars, faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import { faHome, faLayerGroup, faPaperPlane, faPlus, faMinus, faFileLines } from "@fortawesome/free-solid-svg-icons";
+import { motion, AnimatePresence } from "framer-motion";
 import { SOCIAL_LINKS, RESUME_LINKS } from "../data/about";
 
-const MOBILE_BREAKPOINT = 600;
+const MOBILE_BREAKPOINT = 800;
 const OBSERVER_THRESHOLD = 0;
 
 const NAVIGATION_ITEMS = [
@@ -15,195 +16,183 @@ const NAVIGATION_ITEMS = [
 
 function Navbar({ scrollToSection, homeRef, projectsRef, contactRef }) {
   const [activeSection, setActiveSection] = useState("");
-  const [isOpen, setIsOpen] = useState(true);
+  const [isHovered, setIsHovered] = useState(false);
+  const [isClickOpen, setIsClickOpen] = useState(false);
+  const [isOpenMobile, setIsOpenMobile] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [showResumeDropdown, setShowResumeDropdown] = useState(false);
 
-  const sectionRefs = {
-    home: homeRef,
-    projects: projectsRef,
-    contact: contactRef
-  };
+  const sectionRefs = { home: homeRef, projects: projectsRef, contact: contactRef };
 
-  // Handle mobile detection and navbar state
   useEffect(() => {
     const handleResize = () => {
-      const isMobileView = window.matchMedia(`(max-width: ${MOBILE_BREAKPOINT}px)`).matches;
+      const isMobileView = window.innerWidth <= MOBILE_BREAKPOINT;
       setIsMobile(isMobileView);
-      
-      if (isMobileView) {
-        setIsOpen(false);
-      }
+      if (!isMobileView) setIsOpenMobile(false);
     };
-
     handleResize();
     window.addEventListener('resize', handleResize);
-    
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  // Handle section intersection observation
   useEffect(() => {
     const sections = Object.entries(sectionRefs).map(([id, ref]) => ({ ref, id }));
-
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
-          }
+          if (entry.isIntersecting) setActiveSection(entry.target.id);
         });
       },
       { threshold: OBSERVER_THRESHOLD }
     );
-
     sections.forEach(({ ref, id }) => {
       if (ref?.current) {
         ref.current.id = id;
         observer.observe(ref.current);
       }
     });
-
     return () => observer.disconnect();
   }, [homeRef, projectsRef, contactRef]);
 
-  const toggleNavbar = () => setIsOpen(!isOpen);
+  const isOpen = isMobile ? isOpenMobile : (isClickOpen || isHovered);
 
-  const handleNavItemClick = (sectionRef) => {
-    scrollToSection(sectionRef);
-    
+  const handleToggle = () => {
     if (isMobile) {
-      setIsOpen(false);
+      setIsOpenMobile(!isOpenMobile);
+    } else {
+      if (isOpen) {
+        setIsClickOpen(false);
+        setIsHovered(false); 
+      } else {
+        setIsClickOpen(true);
+      }
     }
   };
 
-  const handleMobileOverlayClick = () => setIsOpen(false);
-
-  const getNavItemClassName = (sectionId) => {
-    const baseClasses = "flex items-center gap-3 cursor-pointer transition-all";
-    const activeClasses = activeSection === sectionId ? "text-white " : "text-gray";
-    
-    return `${baseClasses} ${activeClasses}`;
-  };
-
-  const renderProfileSection = () => {
-    if (!isOpen) return null;
-
-    return (
-      <div className="text-left">
-        <h1 className="text-left text-2xl  mt-2">
-          Hello! I'm <br />
-          <span className="text-primary">Mu Zhang</span>
-        </h1>
-        <h1 className="text-left mt-4 text-white">
-          Data Analyst <br />
-          Product Designer <br />
-          Web Developer
-        </h1>
-        <div className="relative mt-4 mb-8">
-          <button 
-            className="px-4 py-2 border border-primary text-base text-primary rounded cursor-pointer flex items-center gap-2 font-medium"
-            onClick={() => setShowResumeDropdown(!showResumeDropdown)}
-          >
-            Resume
-            <FontAwesomeIcon icon={faChevronDown} className={`text-xs transition-transform ${showResumeDropdown ? "rotate-180" : ""}`} />
-          </button>
-          
-          {showResumeDropdown && (
-            <div className="absolute top-full left-0 mt-2 bg-dark rounded-md shadow-lg z-30 w-40 flex flex-col gap-1 p-1 border border-dark3">
-              <a href={RESUME_LINKS.design} target="_blank" rel="noopener noreferrer" className="block w-full">
-                <button className="w-full text-left px-4 py-2 text-base rounded-md bg-dark text-gray cursor-pointer hover:text-white transition">
-                  Design
-                </button>
-              </a>
-              <a href={RESUME_LINKS.data} target="_blank" rel="noopener noreferrer" className="block w-full">
-                <button className="w-full text-left px-4 py-2 text-base rounded-md bg-dark text-gray cursor-pointer hover:text-white transition">
-                  Data
-                </button>
-              </a>
-              <a href={RESUME_LINKS.development} target="_blank" rel="noopener noreferrer" className="block w-full">
-                <button className="w-full text-left px-4 py-2 text-base rounded-md bg-dark text-gray cursor-pointer hover:text-white transition">
-                  Development
-                </button>
-              </a>
-            </div>
-          )}
-        </div>
+  const NavItemContent = ({ icon, label, active }) => (
+    <div className={`relative flex items-center cursor-pointer transition-colors duration-200 ${active ? "text-primary" : "text-gray hover:text-white"}`}>
+      <div className="w-6 flex justify-center items-center flex-shrink-0">
+        <FontAwesomeIcon icon={icon} className="text-xl" />
       </div>
-    );
-  };
-
-  const renderSocialLinks = () => (
-    <div className={`flex items-center ${isOpen ? "space-x-4" : "flex-col space-y-4"} transition-all duration-300`}>
-      <a href={SOCIAL_LINKS.linkedin} target="_blank" rel="noopener noreferrer">
-        <button className="text-white hover:text-primary transition cursor-pointer">
-          <FontAwesomeIcon icon={faLinkedin} className="text-2xl" />
-        </button>
-      </a>
-      <a href={SOCIAL_LINKS.github} target="_blank" rel="noopener noreferrer">
-        <button className="text-white hover:text-primary transition cursor-pointer">
-          <FontAwesomeIcon icon={faGithub} className="text-2xl" />
-        </button>
-      </a>
+      <h4 className={`
+        absolute left-10 text-base whitespace-nowrap transition-all duration-300 ease-out
+        ${isOpen ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4 pointer-events-none"}
+      `}>
+        {label}
+      </h4>
     </div>
-  );
-
-  const renderNavigationItems = () => (
-    <ul className="flex flex-col space-y-4 mt-12 flex-1/3">
-      {NAVIGATION_ITEMS.map(({ id, icon, label }) => (
-        <li
-          key={id}
-          onClick={() => handleNavItemClick(sectionRefs[id])}
-          className={getNavItemClassName(id)}
-        >
-          <FontAwesomeIcon icon={icon} className="text-xl" />
-          {isOpen && <h4 className="text-base">{label}</h4>}
-        </li>
-      ))}
-    </ul>
   );
 
   return (
     <>
-      {/* Mobile overlay */}
-      {isMobile && isOpen && (
-        <div 
-          className="fixed inset-0 bg-dark z-20 lg:hidden"
-          onClick={handleMobileOverlayClick}
-        />
+      {isMobile && (
+        <button 
+          onClick={handleToggle}
+          className="fixed top-6 left-6 z-[80] text-white bg-dark2 border border-dark3 px-4 py-3 shadow-md"
+        >
+          <FontAwesomeIcon icon={isOpen ? faMinus : faPlus} className="text-sm transition-all" />
+        </button>
       )}
 
-      {/* Navigation sidebar */}
+      <AnimatePresence>
+        {isMobile && isOpenMobile && (
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-dark/60 backdrop-blur-sm z-40"
+            onClick={() => setIsOpenMobile(false)}
+          />
+        )}
+      </AnimatePresence>
+
       <nav
+        onMouseEnter={() => !isMobile && setIsHovered(true)}
+        onMouseLeave={() => {
+          setIsHovered(false);
+          setShowResumeDropdown(false);
+        }}
         className={`
-          bg-dark2 text-white h-screen sticky top-0 flex flex-col transition-all duration-300 z-20
-          ${isOpen ? "w-60 p-12" : "w-14 p-4"}
+          bg-dark2 text-white h-screen z-50 flex flex-col transition-all duration-500 ease-in-out
+          ${isMobile ? "fixed inset-y-0 left-0 shadow-2xl" : "sticky top-0"}
+          ${isOpen ? "w-64 p-12" : isMobile ? "w-0 p-0 overflow-hidden" : "w-16 p-5 py-12"}
         `}
       >
-        {/* Toggle button */}
-        <div className="flex justify-end px-1/2">
-          <button 
-            className="cursor-pointer"
-            onClick={toggleNavbar}
-            aria-label={isOpen ? "Close navigation" : "Open navigation"}
-          >
-            <FontAwesomeIcon
-              icon={faBars}
-              className="text-white text-2xl"
-            />
-          </button>
+        {!isMobile && (
+          <div className={`flex ${isOpen ? "justify-end" : "justify-center"} mb-8 transition-all`}>
+            <button 
+              className="cursor-pointer text-white hover:text-primary transition"
+              onClick={handleToggle}
+            >
+              <FontAwesomeIcon icon={isOpen ? faMinus : faPlus} className="text-sm" />
+            </button>
+          </div>
+        )}
+
+        {isMobile && isOpen && <div className="h-12 mb-6 flex-shrink-0" />}
+
+        <div className="flex flex-col mb-12 min-h-[140px] justify-start">
+          <div className={`
+            text-left whitespace-nowrap transition-all duration-300 ease-out
+            ${isOpen ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4 pointer-events-none"}
+          `}>
+            <h1 className="text-left text-2xl mt-2 leading-tight">
+              Hello! I'm <br />
+              <span className="text-primary font-bold">Mu Zhang</span>
+            </h1>
+            <h1 className="text-left mt-4 text-white font-normal leading-relaxed">
+              Data Analyst <br />
+              Designer <br />
+              Developer
+            </h1>
+          </div>
         </div>
 
-        {/* Profile section */}
-        <div className="transition-all duration-300 flex flex-1/6">
-          {renderProfileSection()}
-        </div>
+        <div className="flex flex-col space-y-6">
+          <div className="relative">
+            <div onClick={() => setShowResumeDropdown(!showResumeDropdown)}>
+              <NavItemContent 
+                icon={faFileLines} 
+                label={<span>Resume <FontAwesomeIcon icon={showResumeDropdown ? faMinus : faPlus} className="text-sm ml-1" /></span>} 
+              />
+            </div>
+            
+            <AnimatePresence>
+              {showResumeDropdown && isOpen && (
+                <motion.div 
+                  initial={{ opacity: 0, x: 10 }} 
+                  animate={{ opacity: 1, x: 0 }} 
+                  exit={{ opacity: 0, x: 10 }}
+                  className="absolute top-0 left-full ml-2 flex flex-col z-50 shadow-2xl "
+                >
+                  {Object.entries(RESUME_LINKS).map(([key, link]) => (
+                    <a key={key} href={link} target="_blank" rel="noopener noreferrer" className="block">
+                      <button className="px-4 py-2 text-sm bg-dark2 font-heading font-bold border border-dark3 text-gray hover:text-white hover:border-primary transition uppercase cursor-pointer whitespace-nowrap w-full text-left">
+                        {key}
+                      </button>
+                    </a>
+                  ))}
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
 
-        {/* Social links */}
-        {renderSocialLinks()}
+          <a href={SOCIAL_LINKS.linkedin} target="_blank" rel="noopener noreferrer" className="no-underline">
+            <NavItemContent icon={faLinkedin} label="LinkedIn" />
+          </a>
+          
+          <a href={SOCIAL_LINKS.github} target="_blank" rel="noopener noreferrer" className="no-underline">
+            <NavItemContent icon={faGithub} label="Github" />
+          </a>
+        </div>
       
-        {/* Navigation items */}
-        {renderNavigationItems()}
+        <ul className="flex flex-col space-y-6 mt-12 flex-1/3">
+          {NAVIGATION_ITEMS.map(({ id, icon, label }) => (
+            <li key={id} onClick={() => { scrollToSection(sectionRefs[id]); if (isMobile) setIsOpenMobile(false); }}>
+              <NavItemContent icon={icon} label={label} active={activeSection === id} />
+            </li>
+          ))}
+        </ul>
       </nav>
     </>
   );

@@ -35,13 +35,19 @@ html, body {
 }
 
 .grid-background {
-  background-size: 40px 40px;
   background-color: var(--color-dark);
-  background-image: 
-    linear-gradient(to right, rgba(69, 70, 85, 0.3) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(69, 70, 85, 0.3) 1px, transparent 1px);
-  background-position: center center;
-  
+  position: relative;
+  z-index: 0; 
+}
+
+.grid-background::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1; 
+  opacity: 0.08;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.5' numOctaves='1' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }
 
 /* Animation utilities */
@@ -85,8 +91,17 @@ html {
   scrollbar-width: thin;
 }
 
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
 ::-webkit-scrollbar {
-  width: 4px;
+  width: 1px;
 }
 
 ::-webkit-scrollbar-track {
@@ -95,10 +110,9 @@ html {
 
 ::-webkit-scrollbar-thumb {
   background: var(--color-primary);
-  border-radius: 2px;
+  border-radius: 0;
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-primary-hover);
 }
-
