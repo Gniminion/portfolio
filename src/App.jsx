@@ -5,6 +5,7 @@ import Project from './components/projects/Projects';
 import About from "./components/about/About";
 import Contact from "./components/contact/Contact";
 import ProjectPage from "./components/projects/projpage/ProjectPage";
+import Art from "./components/Art/Art";
 import './App.css'
 
 const BASE_URL = import.meta.env.BASE_URL;
@@ -58,8 +59,8 @@ export default function App() {
               />
               <span className="text-center">
                 © mu zhang 2026 <br/>
-                <a href="mailto:m75zhang@uwaterloo.ca" className="hover:underline italic ml-1">
-                  [ m75zhang@uwaterloo.ca ]
+                <a href="mailto:m75zhang@uwaterloo.ca" className="hover:underline italic">
+                  [ m75zhang @ uwaterloo.ca ]
                 </a>
               </span>
               <img 
@@ -74,11 +75,22 @@ export default function App() {
     );
   }
 
+const ArtPage = () => {
+  return (
+    <div className="flex h-screen text-white overflow-hidden">
+      <div className="flex-1 overflow-y-auto">
+        <Art />
+      </div>
+    </div>
+  );
+}
+
   return (
     <Router basename={BASE_URL}>
       <div className="min-h-screen grid-background">
         <Routes>
           <Route path="/" element={<MainContent />} />
+          <Route path="/art" element={<ArtPage />} />
           <Route path="/project/:id" element={<ProjectPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>

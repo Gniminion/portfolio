@@ -57,13 +57,13 @@ function About() {
             </p>
             
             <div className="flex gap-4 text-gray">
-              <a href={SOCIAL_LINKS.github} target="_blank" rel="noreferrer" className="hover:text-primary transition-colors">
+              <a href={SOCIAL_LINKS.github} target="_blank" rel="noreferrer" className="hover:text-white transition-colors">
                 <FontAwesomeIcon icon={faGithub} />
               </a>
-              <a href={SOCIAL_LINKS.linkedin} target="_blank" rel="noreferrer" className="hover:text-primary transition-colors">
+              <a href={SOCIAL_LINKS.linkedin} target="_blank" rel="noreferrer" className="hover:text-white transition-colors">
                 <FontAwesomeIcon icon={faLinkedin} />
               </a>
-              <a href={RESUME_LINKS.development} target="_blank" rel="noreferrer" className="hover:text-primary transition-colors">
+              <a href={RESUME_LINKS.development} target="_blank" rel="noreferrer" className="hover:text-white transition-colors">
                 <p className="text-sm font-mono italic">[ view resume → ]</p>
               </a>
             </div>

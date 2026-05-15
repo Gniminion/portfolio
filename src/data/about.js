@@ -33,7 +33,7 @@ export const EXPERIENCES = [
       logo: "mikomiko.webp",
       institution: "Mikomiko SG · 2025",
       role: "UX/UI Designer and Product Management",
-      description: "Providing intuitive user interfaces for a AI tool platform. Involved in frontend development of product websites.",
+      description: "Providing intuitive user interfaces for an ACG tool platform. Involved in frontend development of product websites.",
     },
     {
       logo: "waterloo.webp",

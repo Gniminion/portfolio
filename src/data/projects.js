@@ -5,7 +5,7 @@ export const PROJECTS = [
     title: "ProtectSUS", 
     category: ["Design", "Development"], 
     image: "protectsus.webp", 
-    desc: "AI powered code auditor with GitHub integration that debates findings and generates PRs.",
+    desc: "Agentic powered code auditor with GitHub integration that debates findings and generates PRs.",
     priority: true,
     link: "https://devpost.com/software/protetsus",
     tags: ["Next.js", "Typescript", "NextAuth", "Github", "MongoDB", "Agentic AI"],
@@ -27,7 +27,7 @@ export const PROJECTS = [
       Best Use of MongoDB`,
     
       overview: {
-        content: `[ProtectSUS](https://www.protectsus.tech/) is a code security auditor that finds vulnerabilities and generates fixes. Most security tools bury developers in false positives, but we built something that cut through the noise with context-aware analysis and seamless GitHub integration.
+        content: `[ProtectSUS](https://www.protectsus.tech/) is a code security auditor that finds vulnerabilities and generates fixes. Most security tools bury developers in false positives, but we built something that cut through the noise with context aware analysis and seamless GitHub integration.
 
 I was responsible for the entire frontend architecture, building an application that balances sophisticated backend logic with an intuitive user experience. Beyond the core scanning workflow, I included an admin page and supporting infrastructure to signal scalability.
 
@@ -49,12 +49,12 @@ Security tools today fail developers in these critical ways:
 
 The real cost of poor security tooling is huge, breaches average millions in damages, often traceable to human error that better tooling could catch. We needed a system that works like a trusted senior engineer: 
 
-### Challenges assumptions, explains the reasoning, offers solutions, and integrates into existing workflows.`
+### Challenges assumptions, explains the reasoning intuitively, offers solutions, and integrates into existing workflows.`
       },      
     
       development: {
         content: `
-I led frontend development using **Next.js and TypeScript**, handling everything from design decisions to responsive implementation. The challenge wasn't just building features, but rather building components that could flex around uncertain backend outputs and build credibility.
+I led frontend development using **Next.js and TypeScript**, handling everything from design decisions to responsive implementation. My challenge wasn't just building features, but rather building components that could flex around uncertain backend outputs and build credibility.
 
 ### My contributions included:
 * Implemented secure GitHub OAuth via NextAuth.js for user login and repository access
@@ -62,7 +62,7 @@ I led frontend development using **Next.js and TypeScript**, handling everything
 * Built the landing page and flow to code scanner UI with syntax highlighting and vulnerability visualisation
 * Implemented responsive darkmode design for desktop and mobile devices using Tailwind CSS
 
-The frontend communicates with Python-based backend AI agents (OpenAI, Claude, Gemini) that work in parallel, where one searches for general bugs, another audits dependencies, a third synthesizes their debate. MongoDB serves as both a results store and RAG system, letting AI agents query historical vulnerability patterns to improve recommendations over time.
+The frontend communicates with Python based backend AI agents (OpenAI, Claude, Gemini) that work in parallel, where one searches for general bugs, another audits dependencies, a third synthesizes their debate. MongoDB serves as both a results store and RAG system, letting AI agents query historical vulnerability patterns to improve recommendations over time.
 
 Explore the [full open source codebase on GitHub!](https://github.com/pujara-narayana/protectSUS)`,
         
@@ -78,10 +78,10 @@ Explore the [full open source codebase on GitHub!](https://github.com/pujara-nar
         content: `ProtectSUS won **Best Use of MongoDB**, but the real win was building something that felt legitimate. We didn't cut corners to save 48 hours, including a professional landing page and shipping with polish sent the message that security tooling deserves to be taken seriously.
 
 ### Key accomplishments:    
-1. Built a production quality frontend with attention to responsive design, color psychology, and user-centered interactions
+1. Built a production quality frontend with attention to responsive design, color psychology, and user centered interactions
 2. Engineered components to handle variable length AI outputs and adapt to last minute feature changes without UI breaking
 3. Included supporting infrastructure and multi-page layout that signaled scalability beyond a hackathon sprint
-4. Developers can also choose to never leave GitHub: scanning, feedback, and PR creation happen in the tool they already use
+4. Allowed developers to also choose to never leave GitHub, where scanning, feedback, and PR creation can happen in the tool they already use
 
 The project demonstrated that thoughtful frontend design and robust implementation can take a complex system and make it feel intuitive and trustworthy.
 
@@ -181,7 +181,7 @@ We learned how to distill complex data into a [comprehensive report](https://doc
     title: "MikoMiko Product Website", 
     category: ["Design", "Development"], 
     image: "mikoai.webp",
-    desc: "Developing an info site for an AI platform, increasing traction for product and recruitment.",
+    desc: "Developing an info site for an ACG creation platform, increasing traction for product and recruitment.",
     priority: false,
     link: "https://mikomiko.ai",
     tags: ["React", "Tailwind CSS", "Figma", "Next.js", "Git", "SEO"],
