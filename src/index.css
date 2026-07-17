@@ -4,7 +4,7 @@
 
 @layer utilities {
   .bg-dark {
-    background-color: #070715;
+    background-color: #030315;
   }
   .bg-dark2 {
     background-color: #21212A;
@@ -16,7 +16,7 @@
     background-color: #F78C7E;
   }
   .border-dark3 {
-    border-color: #454655; 
+    border-color: #32323e; 
   }
   .border-primary {
     border-color: #F78C7E;
@@ -25,7 +25,7 @@
     color: #F78C7E;
   }
   .text-gray {
-    color: #A9AABC;
+    color: #bdbdca;
   }
   .image{
     flex:1;

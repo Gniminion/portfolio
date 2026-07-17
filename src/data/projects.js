@@ -199,9 +199,31 @@ We learned how to distill complex data into a [comprehensive report](https://doc
       team: `Independent Project for Mikomiko SG`,
     },
   },
+  {
+    title: "Dan Wolczuk Website",
+    category: ["Data", "Design", "Development"],
+    image: "profsite.webp",
+    desc: "Redesigning a website for a professor to showcase resources and publications, based on web analytics.",
+    priority: false,
+    link: "https://drive.google.com/file/d/1c-Caq6i8vIhg_FC7Go49jBNxeYLO8SLU/view?usp=sharing",
+    tags: ["UX Research", "HTML/CSS", "JavaScript", "Figma"],
+    fullDescription: {
+      role: ` UI/UX Designer
+      Frontend Developer`,
+      duration: `4 Months
+      Jan - Apr 2026`,
+      deliverables:`Source Code
+      Figma Designs
+      Website Demo
+      Full Documentation
+      `,
+      team: `Independent Project for Prof. Dan Wolczuk`,
+    },
+
+  },
   { 
     title: "BloomWatch", 
-    category: ["Data", "Design"], 
+    category: ["Data", "Development"], 
     image: "bloomwatch.webp",
     desc: "Using satellite data to predict wildflower blooms. NASA Space Apps 2025 global nominee.",
     priority: false,
@@ -250,15 +272,52 @@ We learned how to distill complex data into a [comprehensive report](https://doc
       University of Waterloo`,
     },
   },
-  // { 
-  //   title: "Subletting in California", 
-  //   category: "Data", 
-  //   image: "sublet.webp",
-  //   desc: "Advising real estate stakeholders on the housing trends in California through exploratory analysis.",
-  //   priority: false,
-  //   link: "https://github.com/Gniminion/rchive/blob/main/Datafest%202025/DataFest%202025.pdf",
-  //   tags: ["R", "Data Visualisation", "Market Research"]
-  // },
+  { 
+    title: "Getaway Ghost", 
+    category: ["Design", "Development"], 
+    image: "ghost.webp",
+    desc: "A 2 player online bluffing boardgame based on Ghosts released in 1982, for UW Game Jam 2026.",
+    priority: false,
+    link: "https://gniminion.itch.io/getaway-ghost",
+    tags: ["Game Design", "Firebase", "Next.js"],
+    fullDescription: {
+      role: ` Game Designer
+      Developer
+      Asset Artist`,
+    
+      duration: `48 Hours
+      Jul 2026`,
+
+      deliverables:` Game Prototype
+      `,
+    
+      team: `Solo Dev
+      For UW Game Jam 2026`,
+    },
+  },
+  { 
+    title: "Subletting in California", 
+    category: "Data", 
+    image: "sublet.webp",
+    desc: "Advising real estate stakeholders on the housing trends in California through exploratory analysis.",
+    priority: false,
+    link: "https://github.com/Gniminion/rchive/blob/main/Datafest%202025/DataFest%202025.pdf",
+    tags: ["R", "Data Visualisation", "Market Research"],
+    fullDescription: {
+      role: ` Data Analyst
+      Researcher`,
+    
+      duration: `24 hours
+      May 2025`,
+
+      deliverables:`Analysis Report
+      Data Visualisations
+      Presentation Slides`,
+
+      team: `3 Members
+      For DataFest 2025`,
+    },
+  },
   { 
     title: "Learn More Video Series", 
     category: ["Design"], 
