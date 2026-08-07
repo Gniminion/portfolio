@@ -2,95 +2,6 @@ export const CATEGORIES = ["All", "Data", "Design", "Development"];
 
 export const PROJECTS = [
   { 
-    title: "ProtectSUS", 
-    category: ["Design", "Development"], 
-    image: "protectsus.webp", 
-    desc: "Agentic powered code auditor with GitHub integration that debates findings and generates PRs.",
-    priority: true,
-    link: "https://devpost.com/software/protetsus",
-    tags: ["Next.js", "Typescript", "NextAuth", "Github", "MongoDB", "Agentic AI"],
-    fullDescription: {
-      role: ` Full Stack / Frontend Developer
-      UI/UX Architect`,
-    
-      duration: `48 Hours
-      Jan 2026`,
-
-      deliverables:`Frontend Application
-      Admin Dashboard
-      Demo Video
-      Source Code
-      `,
-    
-      team: `4 Members
-      For NexHacks 2026
-      Best Use of MongoDB`,
-    
-      overview: {
-        content: `[ProtectSUS](https://www.protectsus.tech/) is a code security auditor that finds vulnerabilities and generates fixes. Most security tools bury developers in false positives, but we built something that cut through the noise with context aware analysis and seamless GitHub integration.
-
-I was responsible for the entire frontend architecture, building an application that balances sophisticated backend logic with an intuitive user experience. Beyond the core scanning workflow, I included an admin page and supporting infrastructure to signal scalability.
-
-The design uses a trust driven gradient to convey technical credibility and innovation. Every layout was built to be responsive across mobile and desktop, and defensive against last minute feature changes.`,
-        images: [
-          {
-            src: "screensus.webp",
-            caption: "ProtectSUS web interface featuring code scanning and vulnerability highlighting, and GitHub App Integration"
-          }
-        ]
-      },
-    
-      problem: {
-        content: `
-Security tools today fail developers in these critical ways:
-* Traditional scanners flag syntax patterns without understanding logic, generating hundreds of false positives that get ignored
-* Existing tools don't explain *why* something is vulnerable or how to fix it effectively
-* Security checks require developers to leave their GitHub workflow and use external tools
-
-The real cost of poor security tooling is huge, breaches average millions in damages, often traceable to human error that better tooling could catch. We needed a system that works like a trusted senior engineer: 
-
-### Challenges assumptions, explains the reasoning intuitively, offers solutions, and integrates into existing workflows.`
-      },      
-    
-      development: {
-        content: `
-I led frontend development using **Next.js and TypeScript**, handling everything from design decisions to responsive implementation. My challenge wasn't just building features, but rather building components that could flex around uncertain backend outputs and build credibility.
-
-### My contributions included:
-* Implemented secure GitHub OAuth via NextAuth.js for user login and repository access
-* Designed and built a comprehensive admin dashboard to validate stack functionality, usage analytics and performance metrics
-* Built the landing page and flow to code scanner UI with syntax highlighting and vulnerability visualisation
-* Implemented responsive darkmode design for desktop and mobile devices using Tailwind CSS
-
-The frontend communicates with Python based backend AI agents (OpenAI, Claude, Gemini) that work in parallel, where one searches for general bugs, another audits dependencies, a third synthesizes their debate. MongoDB serves as both a results store and RAG system, letting AI agents query historical vulnerability patterns to improve recommendations over time.
-
-Explore the [full open source codebase on GitHub!](https://github.com/pujara-narayana/protectSUS)`,
-        
-        images: [
-          {
-            src: "adminsus.webp",
-            caption: "Comprehensive frontend admin dashboard"
-          }
-        ]
-      },
-    
-      outcome: {
-        content: `ProtectSUS won **Best Use of MongoDB**, but the real win was building something that felt legitimate. We didn't cut corners to save 48 hours, including a professional landing page and shipping with polish sent the message that security tooling deserves to be taken seriously.
-
-### Key accomplishments:    
-1. Built a production quality frontend with attention to responsive design, color psychology, and user centered interactions
-2. Engineered components to handle variable length AI outputs and adapt to last minute feature changes without UI breaking
-3. Included supporting infrastructure and multi-page layout that signaled scalability beyond a hackathon sprint
-4. Allowed developers to also choose to never leave GitHub, where scanning, feedback, and PR creation can happen in the tool they already use
-
-The project demonstrated that thoughtful frontend design and robust implementation can take a complex system and make it feel intuitive and trustworthy.
-
-View the [submission on DevPost](https://devpost.com/software/protetsus), check out the [demo video](https://youtu.be/Obq2vTh7gec?si=Erm17X7fRPZMgqlp), or explore the [live application](https://www.protectsus.tech/).`
-      }
-    }
-    
-  },
-  { 
     title: "Tech Investments Analysis", 
     category: ["Data", "Development"], 
     image: "cxc.webp", 
@@ -173,6 +84,93 @@ We tackled the challenge by transforming unstructured funding datasets into a re
 3. Open-sourced the project for future contributors and further development
 
 We learned how to distill complex data into a [comprehensive report](https://docs.google.com/document/d/1AiPb38hWNCZXd5Xq7SNgfiy1YsRb904nUEvD_FRxBnE/edit?tab=t.0) under tight hackathon timelines, combining technical rigor with user-centered design.`
+      }
+    }
+    
+  },
+  { 
+    title: "ProtectSUS", 
+    category: ["Design", "Development"], 
+    image: "protectsus.webp", 
+    desc: "Agentic powered code auditor with GitHub integration that debates findings and generates PRs.",
+    priority: true,
+    link: "https://devpost.com/software/protetsus",
+    tags: ["Next.js", "Typescript", "NextAuth", "Github", "MongoDB", "Agentic AI"],
+    fullDescription: {
+      role: ` Full Stack / Frontend Developer
+      UI/UX Architect`,
+    
+      duration: `48 Hours
+      Jan 2026`,
+
+      deliverables:`Frontend Application
+      Admin Dashboard
+      Demo Video
+      Source Code
+      `,
+    
+      team: `4 Members
+      For NexHacks 2026
+      Best Use of MongoDB`,
+    
+      overview: {
+        content: `[ProtectSUS](https://www.protectsus.tech/) is a code security auditor that finds vulnerabilities and generates fixes. Most security tools bury developers in false positives, but we built something that cuts the noise with context aware analysis and GitHub integration.
+
+I was responsible for the entire frontend architecture, building an application that balances backend logic with an intuitive user experience. Beyond the core scanning workflow, I included an admin page and supporting infrastructure for scalability.`,
+        images: [
+          {
+            src: "screensus.webp",
+            caption: "ProtectSUS web interface featuring code scanning and vulnerability highlighting, and GitHub App Integration"
+          }
+        ]
+      },
+    
+      problem: {
+        content: `
+Security tools today fail developers in these critical ways:
+* Traditional scanners flag syntax patterns without understanding logic, generating hundreds of false positives that get ignored
+* Existing tools don't explain *why* something is vulnerable or how to fix it effectively
+* Security checks require developers to leave their GitHub workflow and use external tools
+
+The cost of poor security tooling is huge, breaches average millions in damages, often traceable to human error that better tooling could catch. We needed a system that works like a trusted senior engineer: 
+
+### Challenges assumptions, explains the reasoning intuitively, offers solutions, and integrates into existing workflows.`
+      },      
+    
+      development: {
+        content: `
+I led frontend development using **Next.js and TypeScript**, handling everything from design decisions to responsive implementation. My challenge wasn't just building features, but rather building components that could flex around uncertain backend outputs and build credibility.
+
+### My contributions included:
+* Implemented secure GitHub OAuth via NextAuth.js for user login and repository access
+* Designed and built a comprehensive admin dashboard to validate stack functionality, usage analytics and performance metrics
+* Built the landing page and flow to code scanner UI with syntax highlighting and vulnerability visualisation
+* Implemented responsive darkmode design for desktop and mobile devices using Tailwind CSS
+
+The frontend communicates with Python based backend AI agents (OpenAI, Claude, Gemini) that work in parallel, where one searches for general bugs, another audits dependencies, a third synthesizes their debate. MongoDB serves as both a results store and RAG system, letting AI agents query historical vulnerability patterns to improve recommendations over time.
+
+Explore the [full open source codebase on GitHub!](https://github.com/pujara-narayana/protectSUS)`,
+        
+        images: [
+          {
+            src: "adminsus.webp",
+            caption: "Comprehensive frontend admin dashboard"
+          }
+        ]
+      },
+    
+      outcome: {
+        content: `ProtectSUS won **Best Use of MongoDB**. We didn't cut corners to save 48 hours, including a professional landing page and shipping with polish sent the message that security tooling deserves to be taken seriously.
+
+### Key accomplishments:    
+1. Built a production quality frontend with attention to responsive design, color psychology, and user centered interactions
+2. Engineered components to handle variable length AI outputs and adapt to last minute feature changes without UI breaking
+3. Included supporting infrastructure and multi-page layout that signaled scalability beyond a hackathon sprint
+4. Allowed developers to also choose to never leave GitHub, where scanning, feedback, and PR creation can happen in the tool they already use
+
+The project demonstrated that thoughtful frontend design and robust implementation can take a complex system and make it feel intuitive and trustworthy.
+
+View the [submission on DevPost](https://devpost.com/software/protetsus), check out the [demo video](https://youtu.be/Obq2vTh7gec?si=Erm17X7fRPZMgqlp), or explore the [live application](https://www.protectsus.tech/).`
       }
     }
     
@@ -295,55 +293,55 @@ We learned how to distill complex data into a [comprehensive report](https://doc
       For UW Game Jam 2026`,
     },
   },
-  { 
-    title: "Subletting in California", 
-    category: "Data", 
-    image: "sublet.webp",
-    desc: "Advising real estate stakeholders on the housing trends in California through exploratory analysis.",
-    priority: false,
-    link: "https://github.com/Gniminion/rchive/blob/main/Datafest%202025/DataFest%202025.pdf",
-    tags: ["R", "Data Visualisation", "Market Research"],
-    fullDescription: {
-      role: ` Data Analyst
-      Researcher`,
+  // { 
+  //   title: "Subletting in California", 
+  //   category: "Data", 
+  //   image: "sublet.webp",
+  //   desc: "Advising real estate stakeholders on the housing trends in California through exploratory analysis.",
+  //   priority: false,
+  //   link: "https://github.com/Gniminion/rchive/blob/main/Datafest%202025/DataFest%202025.pdf",
+  //   tags: ["R", "Data Visualisation", "Market Research"],
+  //   fullDescription: {
+  //     role: ` Data Analyst
+  //     Researcher`,
     
-      duration: `24 hours
-      May 2025`,
+  //     duration: `24 hours
+  //     May 2025`,
 
-      deliverables:`Analysis Report
-      Data Visualisations
-      Presentation Slides`,
+  //     deliverables:`Analysis Report
+  //     Data Visualisations
+  //     Presentation Slides`,
 
-      team: `3 Members
-      For DataFest 2025`,
-    },
-  },
-  { 
-    title: "Learn More Video Series", 
-    category: ["Design"], 
-    image: "learnmore.webp",
-    desc: "Storyboarding, designing, and editing videos to help students approach learning effectively.",
-    priority: false,
-    link: "https://www.youtube.com/@LearnMoreWithDanWolczuk/videos",
-    tags: ["Photoshop", "Premiere Pro", "Storyboarding", "Animation"],
-    fullDescription: {
-      role: `Animator
-      Video Editor
-      Storyboarder`,
+  //     team: `3 Members
+  //     For DataFest 2025`,
+  //   },
+  // },
+  // { 
+  //   title: "Learn More Video Series", 
+  //   category: ["Design"], 
+  //   image: "learnmore.webp",
+  //   desc: "Storyboarding, designing, and editing videos to help students approach learning effectively.",
+  //   priority: false,
+  //   link: "https://www.youtube.com/@LearnMoreWithDanWolczuk/videos",
+  //   tags: ["Photoshop", "Premiere Pro", "Storyboarding", "Animation"],
+  //   fullDescription: {
+  //     role: `Animator
+  //     Video Editor
+  //     Storyboarder`,
     
-      duration: `4 Months
-      May - Aug 2024`,
+  //     duration: `4 Months
+  //     May - Aug 2024`,
 
-      deliverables:`12 Educational Videos
-      Animation Assets
-      Thumbnail Designs
-      Translation Subtitles
-      `,
+  //     deliverables:`12 Educational Videos
+  //     Animation Assets
+  //     Thumbnail Designs
+  //     Translation Subtitles
+  //     `,
     
-      team: `Collaboration with Prof. Dan Wolczuk
-      University of Waterloo`,
-    },
-  }, 
+  //     team: `Collaboration with Prof. Dan Wolczuk
+  //     University of Waterloo`,
+  //   },
+  // }, 
   // { 
   //   title: "Conference Tracker", 
   //   category: ["Data", "Development"], 

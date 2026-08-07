@@ -3,13 +3,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram, faOctopusDeploy, faDeviantart } from "@fortawesome/free-brands-svg-icons";
 import ArtAbout from "./ArtAbout";
 import ArtWorks from "./ArtWorks";
+import ArtEvents from "./ArtEvents";
 
 function Art() {
   const [activeTab, setActiveTab] = useState("works");
   
   const topRef = useRef(null);
 
-  const TABS = ["works", "about"];
+  const TABS = ["works", "events", "about"];
 
   const scrollToTop = () => {
     topRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -71,7 +72,9 @@ function Art() {
           {renderHero()}
           {renderTabs()}
           <div className="mt-4">
-            {activeTab === "works" ? <ArtWorks onScrollToTop={scrollToTop} /> : <ArtAbout />}
+            {activeTab === "works" && <ArtWorks onScrollToTop={scrollToTop} />}
+            {activeTab === "events" && <ArtEvents onScrollToTop={scrollToTop} />}
+            {activeTab === "about" && <ArtAbout />}
           </div>
         </div>
       </div>
