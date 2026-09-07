@@ -1,5 +1,11 @@
 export const ART_PIECES = [
   {
+    id: 14,
+    title: "Roller Cosplay Event Poster",
+    image:"sproller.webp",
+    description: "with scott pilgrm characters"
+  },
+  {
     id: 13,
     title: "Orb: On the Movements of the Earth Poster",
     image: "orb.webp",

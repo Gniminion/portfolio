@@ -24,6 +24,12 @@ export const PROFILE_IMAGE = {
   
 export const EXPERIENCES = [
     {
+      logo: "geo.svg",
+      institution: "H2O Geomatics · 2026",
+      role: "Fullstack Web Developer",
+      description: "[ Ongoing ] Developing a data dashboard for environmental variables to allow for analysis across spatiotemporal scales.",
+    },
+    {
       logo: "nflogo.webp",
       institution: "NeuroFlex · 2026",
       role: "Frontend and Data Visualisation Developer",
@@ -47,7 +53,7 @@ export const EDUCATION = [
     {
       logo: "waterloo.webp",
       institution: "University of Waterloo · 2023 - 2028",
-      degree: "Bachelor of Mathematics (Computational Mathematics & Biostatistics)",
+      degree: "Bachelor of Mathematics · Major in Computational Mathematics & Biostatistics · Minor in Cognitive Science",
       description: "Relevant coursework in statistical analysis, data structures, object oriented programming, bioinformatics, and more.",
     },
     {

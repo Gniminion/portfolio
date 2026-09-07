@@ -372,10 +372,11 @@ View the [submission on DevPost](https://devpost.com/software/protetsus), check 
 ];
 
 export const PAPERS = [
-  { title: "Machine Translation in Human Oriented Workplaces", category: "HCI",
-    year: "2023",
-    desc: "Machine translation covers the task of preserving the meaning of the input text and producing fluent text in the output language. As machine translation tools become more prevalent in daily life, there are, of course, benefits and drawbacks. This paper attempts to provide a holistic perspective in translation machines and human interaction by interviewing industry professionals.",
-    link: "https://drive.google.com/file/d/1LIBhIGGU2dM3YiRdivpGxKs3GqQOslPe/view?usp=drive_link" },
+  {
+    title: "Microscopic Genome Analysis Across Temperature Ranges", category: "Bioinformatics",
+    year: "2025",
+    desc: "This comparative genomic study examines how extreme temperature ranges shape the genomes, gene content, and metabolic pathways of microorganisms across fifteen reference genomes, using workflows like Prokka annotation, Roary pan-genome clustering, and KEGG pathway mapping to identify distinct molecular strategies for thermal adaptation.",
+    link: "https://drive.google.com/file/d/1pLj-BZfV2EOaoFzd6-sNuzUtWpOfQOWq/view?usp=sharing" },
   { title: "Rationality and Emotion in Permadeath Game Design",  category: "Game Theory",
     year: "2025",
     desc: "A non rigourous study of how permadeath transforms game theory into emotional experience using Risk of Rain 2 as a case study. Analysis demonstrates psychological triggers like greed and the sunk-cost fallacy drive irrational play to create engagement.",
@@ -388,6 +389,10 @@ export const PAPERS = [
     year: "2023",
     desc: "This mathematical investigation aims to understand the structure and related volume of the Codd neck bottle in the hopes of finding why alterations have been made that takes away from its original authenticity, using applications of integration (volumes of revolution), geometric visualisation, and polynomial interpolations with matricies.",
     link: "https://drive.google.com/file/d/13-ZeC8RwwzlLL3vGj4JQjwpHCcQwB93d/view?usp=drive_link" },
+  { title: "Machine Translation in Human Oriented Workplaces", category: "HCI",
+    year: "2023",
+    desc: "Machine translation covers the task of preserving the meaning of the input text and producing fluent text in the output language. As machine translation tools become more prevalent in daily life, there are, of course, benefits and drawbacks. This paper attempts to provide a holistic perspective in translation machines and human interaction by interviewing industry professionals.",
+    link: "https://drive.google.com/file/d/1LIBhIGGU2dM3YiRdivpGxKs3GqQOslPe/view?usp=drive_link" },
   // { title: "Investigating Osmolarity in Relation to Mitosis Rate in Meristem Cells", category: "Biology",
   //   year: "2023",
   //   desc: "A month long project involving collecting both quantitative and qualitative data using laboratory techniques. The results of this paper supports the hypothesis that higher osmolarity limits mitosis and the cell division process in Allium cepa root meristem cells.",
